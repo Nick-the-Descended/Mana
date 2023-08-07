@@ -1,0 +1,12 @@
+[
+  {"href": "/item/maps_101", "imgSrc": "/data/maps/101.jpg", "text": "Text"},
+  {"href": "/item/maps_102", "imgSrc": "/data/maps/102.jpg", "text": "Text"},
+  {"href": "/item/maps_103", "imgSrc": "/data/maps/103.jpg", "text": "Text"},
+  {"href": "/item/maps_104", "imgSrc": "/data/maps/104.jpg", "text": "Text"},
+  {"href": "/item/maps_105", "imgSrc": "/data/maps/105.jpg", "text": "Text"},
+  {"href": "/item/maps_61", "imgSrc": "/data/maps/61.jpg", "text": "Text"},
+  {"href": "/item/maps_62", "imgSrc": "/data/maps/62.jpg", "text": "Text"},
+  {"href": "/item/maps_79", "imgSrc": "/data/maps/79.jpg", "text": "Text"},
+  {"href": "/item/maps_81", "imgSrc": "/data/maps/81.jpg", "text": "Text"},
+  {"href": "/item/maps_99", "imgSrc": "/data/maps/99.jpg", "text": "Text"}
+]
