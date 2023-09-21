@@ -2,10 +2,10 @@
     import { language } from "$lib/stores.ts";
 
     let scarfLines = [
-        { href: "/scarves/pirosmani", imgSrc: "/scarves/pirosmani.png", alt: "pirosmani", textEn: "pirosmani", textGeo: "ფიროსმანი" },
-        { href: "/scarves/otskheli", imgSrc: "/scarves/otskheli.png", alt: "otskheli", textEn: "otskheli", textGeo: "ოცხელი" },
-        { href: "/scarves/our", imgSrc: "/scarves/our_design.png", alt: "our", textEn: "our design", textGeo: "ჩვენი დიზაინი" },
-        { href: "/scarves/maps", imgSrc: "/scarves/maps.png", alt: "maps", textEn: "maps", textGeo: "რუკები" },
+        { href: "/scarves/pirosmani", imgSrc: "/scarves/pirosmani.webp", alt: "pirosmani", textEn: "pirosmani", textGeo: "ფიროსმანი" },
+        { href: "/scarves/otskheli", imgSrc: "/scarves/otskheli.webp", alt: "otskheli", textEn: "otskheli", textGeo: "ოცხელი" },
+        { href: "/scarves/our", imgSrc: "/scarves/our_design.webp", alt: "our", textEn: "our design", textGeo: "ჩვენი დიზაინი" },
+        { href: "/scarves/maps", imgSrc: "/scarves/maps.webp", alt: "maps", textEn: "maps", textGeo: "რუკები" },
     ];
 </script>
 

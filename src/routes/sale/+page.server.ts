@@ -5,15 +5,14 @@ interface DataProps {
 }
 
 export const load: Load = async (): Promise<{ props: DataProps } | { status: number; error: Error }> => {
-    const slugs = ['pirosmani', 'otskheli', 'our', 'maps'];
-
     try {
         let data: Record<string, any> = {};
 
-        for (const slug of slugs) {
-            const module = await import(`../../../data/${slug}.json`);
-            data[slug] = module.default;
-        }
+
+        console.log("\n\n")
+        const module = await import(`../../data/sale.json`);
+        data['sale'] = module.default;
+
 
         return {
             props: {

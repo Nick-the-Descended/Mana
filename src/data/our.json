@@ -1,8 +1,10 @@
 [
-  {"href": "/item/our_51", "imgSrc": "/data/our/51.jpg", "text": "Text"},
-  {"href": "/item/our_60", "imgSrc": "/data/our/60.jpg", "text": "Text"},
-  {"href": "/item/our_63", "imgSrc": "/data/our/63.jpg", "text": "Text"},
-  {"href": "/item/our_80", "imgSrc": "/data/our/80.jpg", "text": "Text"},
-  {"href": "/item/our_83", "imgSrc": "/data/our/83.jpg", "text": "Text"},
-  {"href": "/item/our_86", "imgSrc": "/data/our/86.jpg", "text": "Text"}
+  {"href": "/item/our_anbani", "imgSrc": "/data/our/anbani.webp", "textEn": "Georgian Alphabet", "textGeo": "ქართული ანბანი"},
+  {"href": "/item/our_ch", "imgSrc": "/data/our/ch.webp", "textEn": "The Greatest British", "textGeo": "უდიდესი ბრიტანელი"},
+  {"href": "/item/our_gul", "imgSrc": "/data/our/gul.webp", "textEn": "love", "textGeo": "სიყვარული"},
+  {"href": "/item/our_gul_2", "imgSrc": "/data/our/gul_2.webp", "textEn": "Dots", "textGeo": "წერტილები"},
+  {"href": "/item/our_k", "imgSrc": "/data/our/k.webp", "textEn": "Cactus (red)", "textGeo": "კაკტუსი"},
+  {"href": "/item/our_k_1", "imgSrc": "/data/our/k_1.webp", "textEn": "Cactus", "textGeo": "კაკტუსი"},
+  {"href": "/item/our_k_2", "imgSrc": "/data/our/k_2.webp", "textEn": "Cactus", "textGeo": "კაკტუსი"},
+  {"href": "/item/our_k_3", "imgSrc": "/data/our/k_3.webp", "textEn": "Cactus", "textGeo": "კაკტუსი"}
 ]

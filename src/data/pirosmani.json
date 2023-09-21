@@ -1,13 +1,17 @@
 [
-  {"href": "/item/pirosmani_20_1", "imgSrc": "/data/pirosmani/20_1.jpg", "text": "Text"},
-  {"href": "/item/pirosmani_30", "imgSrc": "/data/pirosmani/30.jpg", "text": "Text"},
-  {"href": "/item/pirosmani_36", "imgSrc": "/data/pirosmani/36.jpg", "text": "Text"},
-  {"href": "/item/pirosmani_45", "imgSrc": "/data/pirosmani/45.jpg", "text": "Text"},
-  {"href": "/item/pirosmani_65", "imgSrc": "/data/pirosmani/65.jpg", "text": "Text"},
-  {"href": "/item/pirosmani_67", "imgSrc": "/data/pirosmani/67.jpg", "text": "Text"},
-  {"href": "/item/pirosmani_75", "imgSrc": "/data/pirosmani/75.jpg", "text": "Text"},
-  {"href": "/item/pirosmani_76", "imgSrc": "/data/pirosmani/76.jpg", "text": "Text"},
-  {"href": "/item/pirosmani_77", "imgSrc": "/data/pirosmani/77.jpg", "text": "Text"},
-  {"href": "/item/pirosmani_91", "imgSrc": "/data/pirosmani/91.jpg", "text": "Text"},
-  {"href": "/item/pirosmani_lomi", "imgSrc": "/data/pirosmani/lomi.jpg", "text": "Text"}
+  {"href": "/item/pirosmani_bushti", "imgSrc": "/data/pirosmani/bushti.webp", "textEn": "A girl with a balloon", "textGeo": "გოგონა საჰაერო ბუშტით"},
+  {"href": "/item/pirosmani_iremi", "imgSrc": "/data/pirosmani/iremi.webp", "textEn": "Deer", "textGeo": "ირემი"},
+  {"href": "/item/pirosmani_jirafi", "imgSrc": "/data/pirosmani/jirafi.webp", "textEn": "Giraffe", "textGeo": "ჟირაფი"},
+  {"href": "/item/pirosmani_jirafi_2", "imgSrc": "/data/pirosmani/jirafi_2.webp", "textEn": "Giraffe", "textGeo": "ჟირაფი"},
+  {"href": "/item/pirosmani_lion_2", "imgSrc": "/data/pirosmani/lion_2.webp", "textEn": "Lions", "textGeo": "ლომები"},
+  {"href": "/item/pirosmani_lomi", "imgSrc": "/data/pirosmani/lomi.webp", "textEn": "Lion", "textGeo": "ლომი"},
+  {"href": "/item/pirosmani_ludit", "imgSrc": "/data/pirosmani/ludit.webp", "textEn": "A woman with a mug of beer", "textGeo": "ქალი კათხა ლუდით"},
+  {"href": "/item/pirosmani_marao", "imgSrc": "/data/pirosmani/marao.webp", "textEn": "Ortachala Beauty", "textGeo": "ორთაჭალის ტურფა"},
+  {"href": "/item/pirosmani_marao_2", "imgSrc": "/data/pirosmani/marao_2.webp", "textEn": "Ortachala Beauty", "textGeo": "ორთაჭალის ტურფა"},
+  {"href": "/item/pirosmani_margarita", "imgSrc": "/data/pirosmani/margarita.webp", "textEn": "Aktrisa Margarita", "textGeo": "აქტრისა მარგარიტა"},
+  {"href": "/item/pirosmani_margarita_1", "imgSrc": "/data/pirosmani/margarita_1.webp", "textEn": "Aktrisa Margarita", "textGeo": "აქტრისა მარგარიტა"},
+  {"href": "/item/pirosmani_margarita_2", "imgSrc": "/data/pirosmani/margarita_2.webp", "textEn": "Aktrisa Margarita", "textGeo": "აქტრისა მარგარიტა"},
+  {"href": "/item/pirosmani_metevze", "imgSrc": "/data/pirosmani/metevze.webp", "textEn": "Fisherman", "textGeo": "მეთევზე"},
+  {"href": "/item/pirosmani_peizaji", "imgSrc": "/data/pirosmani/peizaji.webp", "textEn": "donkey bridge", "textGeo": "ვირის ხიდი"},
+  {"href": "/item/pirosmani_qolgit", "imgSrc": "/data/pirosmani/qolgit.webp", "textEn": "Woman with flower and umbrella", "textGeo": "ქალი ყვავილითა და ქოლგით"}
 ]

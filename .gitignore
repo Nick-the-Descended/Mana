@@ -2,7 +2,9 @@
 node_modules
 /build
 /.svelte-kit
+/.idea
 /package
+/.firebase
 .env
 .env.*
 !.env.example

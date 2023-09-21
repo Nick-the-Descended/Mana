@@ -20,10 +20,11 @@
                 </a>
 
                 <!-- Nav Links -->
-                <div class="space-x-4 font-semibold">
-                    <a href="/scarves" class={activeClass('/scarves')}>{$language === 'EN' ? 'SCARVES' : 'შარფები'}</a>
-                    <!--                    <a href="/gifts" class={activeClass('/gifts')}>GIFTS</a>-->
-                    <a href="/sale" class={activeClass('/sale')}>{$language === 'EN' ? 'SALE' : 'ფასდაკლება'}</a>
+                <div class="space-x-10 font-medium">
+                    <a href="/scarves"
+                       class={activeClass('/scarves')}>{$language === 'EN' ? 'SCARVES' : 'შარფები'}</a>
+                    <a href="/sale"
+                       class={activeClass('/sale')}>{$language === 'EN' ? 'SALE' : 'ფასდაკლება'}</a>
                     <a href="/about"
                        class={activeClass('/about')}>{$language === 'EN' ? 'ABOUT US' : 'ჩვენს შესახებ'}</a>
                 </div>
@@ -50,22 +51,19 @@
         <slot class="flex-grow"/>
     </div>
 
-    <div class="pb-5 pt-5 bg-gray-200">
-        <!--        <div class="flex justify-center">-->
-        <!--            <p class="border-t border-black w-2/5"></p>-->
-        <!--        </div>-->
+    <div class="footer-wrap pb-5 pt-5 bg-gray-200">
         <footer class="flex items-center justify-center">
             <ul class="text-center space-x-4 pt-5 pb-5 flex flex-row">
                 <li class="inline-block"><a href="mailto:info.mana.scarf@gmail.com">info.mana.scarf@gmail.com</a>
                 </li>
                 <li class="flex space-x-4">
                     <a href="https://www.instagram.com/mana_scarf_mana/" target="_blank" rel="noopener noreferrer">
-                        <img src="/insta.svg" alt="Instagram" class="h-6 w-auto">
+                        <img src="/insta.svg" height="18" width="auto" alt="Instagram" class="">
                     </a>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/MaNaScarves" target="_blank" rel="noopener noreferrer">
-                        <img src="/fb.svg" alt="Facebook" class="h-6 w-auto">
+                        <img src="/fb.svg" height="18" width="auto" alt="Facebook" class="">
                     </a>
                 </li>
             </ul>
@@ -73,9 +71,14 @@
     </div>
 </div>
 
-
 <style lang="postcss">
     .squash {
         margin: 0 14rem 1rem 14rem;
+    }
+
+    @media (max-width: 640px) {
+        .footer-wrap {
+            display: none;
+        }
     }
 </style>

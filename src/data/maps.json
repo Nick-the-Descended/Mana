@@ -1,12 +1,6 @@
 [
-  {"href": "/item/maps_101", "imgSrc": "/data/maps/101.jpg", "text": "Text"},
-  {"href": "/item/maps_102", "imgSrc": "/data/maps/102.jpg", "text": "Text"},
-  {"href": "/item/maps_103", "imgSrc": "/data/maps/103.jpg", "text": "Text"},
-  {"href": "/item/maps_104", "imgSrc": "/data/maps/104.jpg", "text": "Text"},
-  {"href": "/item/maps_105", "imgSrc": "/data/maps/105.jpg", "text": "Text"},
-  {"href": "/item/maps_61", "imgSrc": "/data/maps/61.jpg", "text": "Text"},
-  {"href": "/item/maps_62", "imgSrc": "/data/maps/62.jpg", "text": "Text"},
-  {"href": "/item/maps_79", "imgSrc": "/data/maps/79.jpg", "text": "Text"},
-  {"href": "/item/maps_81", "imgSrc": "/data/maps/81.jpg", "text": "Text"},
-  {"href": "/item/maps_99", "imgSrc": "/data/maps/99.jpg", "text": "Text"}
+  {"href": "/item/maps_batumi", "imgSrc": "/data/maps/batumi.webp", "textEn": "Batumi Map1", "textGeo": "ბათუმის რუკა1"},
+  {"href": "/item/maps_batumi_2", "imgSrc": "/data/maps/batumi_2.webp", "textEn": "Batumi Map2", "textGeo": "ბათუმის რუკა2"},
+  {"href": "/item/maps_tb_2", "imgSrc": "/data/maps/tb_2.webp", "textEn": "Tbilisi Map1", "textGeo": "თბილისის რუკა1"},
+  {"href": "/item/maps_tb_1", "imgSrc": "/data/maps/tb_1.webp", "textEn": "Tbilisi Map2", "textGeo": "თბილისის რუკა2"}
 ]

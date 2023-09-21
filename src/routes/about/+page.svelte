@@ -24,6 +24,6 @@
         {/each}
     </div>
     <div class="pt-12 pb-8">
-        <img class="image" src='https://random.imagecdn.app/900/300' alt='alt'>
+        <img class="image" height="300" width="900" src='/main_cover.webp' alt='alt'>
     </div>
 </div>

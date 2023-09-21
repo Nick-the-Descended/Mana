@@ -11,11 +11,11 @@ body {
     --fg-2: hsl(0, 0%, 30%);
     --link: hsl(208, 77%, 47%);
     --border-radius: 4px;
-    font-family: Inter, sans-serif;
+    font-family: FiraGo, sans-serif;
     background: var(--bg-1);
     color: var(--fg-1);
     line-height: 1.5;
-
+    scrollbar-gutter: stable;
     height: calc(100vh - 2rem);
 }
 nav {
