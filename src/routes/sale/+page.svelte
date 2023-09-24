@@ -1,6 +1,9 @@
 <script>
     import {page} from "$app/stores";
     import {language} from "$lib/stores.ts";
+    import {getStorage, ref, getDownloadURL} from "firebase/storage";
+
+    const storage = getStorage();
 
     export let allItems = $page.data.props.data;
     let scarfItems = [];
@@ -35,17 +38,17 @@
 </script>
 
 <div class="flex-grow flex justify-center h-full w-full">
-    <div class="p-12 grid content-center grid-cols-4">
+    <div class="p-12 image-grid content-center justify-around">
         {#each scarfItems as scarf}
-            {#await scarf.imgSrc}
+            {#await getDownloadURL(ref(storage, scarf.imgSrc))}
                 <div class="pl-3 pr-3 pb-20 justify-center">
                     <img src="" width="300" height="300" alt="">
                     <p class="w-full flex content-center justify-center">Loading...</p>
                 </div>
-            {:then base64}
+            {:then img}
                 <a href={scarf.href}
-                   class="pl-3 pr-3 pb-20 justify-center transform transition-transform duration-300 hover:scale-110">
-                    <img src={scarf.imgSrc} width="300" height="300" alt={scarf.alt}>
+                   class="border-1 bg-gray-100 rounded pl-3 pr-3 mb-20 justify-center transform transition-transform duration-300 hover:scale-110">
+                    <img src={img} width="300" height="300" alt={scarf.alt}>
                 </a>
             {/await}
         {/each}
@@ -53,6 +56,20 @@
 </div>
 
 <style>
+    @media (max-width: 640px) {
+        .phone-wrap{
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+
+    .image-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 300px);
+    }
     ul {
         list-style: none;
         display: flex;

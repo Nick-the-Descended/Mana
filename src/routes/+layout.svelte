@@ -1,26 +1,68 @@
 <script>
+    import { initializeApp } from "firebase/app";
+    import { getDatabase } from "firebase/database";
+    import { getStorage } from "firebase/storage";
     import "../app.css";
     import {page} from '$app/stores';
-
     import {language} from "$lib/stores.ts";
+    import {onMount} from "svelte";
+
+    // can be moved to env
+    const PROJECT_ID='mana-scarf'
+    const DATABASE_NAME='mana-scarf-default-rtdb'
+
+    const firebaseConfig = {
+        authDomain: `${PROJECT_ID}.firebaseapp.com`,
+        databaseURL: `https://${DATABASE_NAME}.firebaseio.com`,
+        projectId: `${PROJECT_ID}`,
+        storageBucket: `${PROJECT_ID}.appspot.com`
+    };
+
+    const app1 = initializeApp(firebaseConfig);
+
+    const database = getDatabase(app1);
+    const storage = getStorage(app1);
+
 
     $: path = $page.url.pathname;
 
     $: activeClass = (p) => path === p ? 'underline' : '';
-</script>
 
-<div class="flex flex-col justify-between min-h-screen top-0 pt-0">
-    <div class="pl-16 pr-16 squash">
-        <nav class="p-6 pt-16 pb-0">
-            <div class="ml-0 mr-0 container flex justify-between items-center">
+    let screenSize;
+    let screenWidth = calculateValue()
+
+    function calculateValue() {
+        if (screenSize <= 1300) {
+            return 0.1;
+        } else if (screenSize >= 2000) {
+            return 12;
+        } else {
+            const t = (screenSize - 1300) / (2000 - 1300);
+            return t * 12;
+        }
+    }
+</script>
+<svelte:window bind:innerWidth={screenSize} />
+
+<div class="flex flex-col justify-between min-h-screen top-0 pt-0" style='--screenSize:{calculateValue(screenSize) || 1400};'>
+    <div class="phone-nav-wrap pl-16 pr-16 dynamic">
+        <nav class="phone-nav p-6 pt-16 pb-0">
+            <div class="phone-flex ml-0 mr-0 container flex justify-between items-center">
 
                 <!-- Logo -->
-                <a href="/">
+
+                <a class="phone-logo" href="/">
                     <img src="/logo.svg" alt="Logo" class="h-9 w-auto">
                 </a>
+                <div class="phone-show flex flex-row">
+                    <select bind:value={$language} class="rounded">
+                        <option value="EN">EN</option>
+                        <option value="GEO">GEO</option>
+                    </select>
+                </div>
 
                 <!-- Nav Links -->
-                <div class="space-x-10 font-medium">
+                <div class="phone-links space-x-10 font-medium">
                     <a href="/scarves"
                        class={activeClass('/scarves')}>{$language === 'EN' ? 'SCARVES' : 'შარფები'}</a>
                     <a href="/sale"
@@ -30,11 +72,8 @@
                 </div>
 
                 <!-- Language Switcher and cart -->
-                <div class="flex flex-row">
-                    <a class="pr-0.5" href="/">
-                        <img src="/shopping_bag.svg" alt="shopping_bag" class="h-6 w-auto">
-                    </a>
-                    <select bind:value={$language} class="border-2 rounded">
+                <div class="phone-hide flex flex-row">
+                    <select bind:value={$language} class="rounded">
                         <option value="EN">EN</option>
                         <option value="GEO">GEO</option>
                     </select>
@@ -47,7 +86,7 @@
         </div>
     </div>
 
-    <div class="squash flex-grow">
+    <div class="squash flex-grow dynamic">
         <slot class="flex-grow"/>
     </div>
 
@@ -72,13 +111,38 @@
 </div>
 
 <style lang="postcss">
-    .squash {
-        margin: 0 14rem 1rem 14rem;
+    .dynamic {
+        margin: 0 calc(var(--screenSize) * 1vw ) 1rem calc(var(--screenSize) * 1vw ) !important;
+    }
+    .phone-show{
+        display: none;
     }
 
-    @media (max-width: 640px) {
-        .footer-wrap {
+    @media (max-width: 700px) {
+
+        .phone-links{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .phone-logo{
+            /*padding-bottom: 15px;*/
+        }
+        .phone-hide{
             display: none;
+        }
+        .phone-show{
+            display: inline-block;
+        }
+        .phone-flex {
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        .phone-nav {
+            padding: 20px 10px 15px 10px;
+        }
+        .phone-nav-wrap {
+            padding: 0;
         }
     }
 </style>

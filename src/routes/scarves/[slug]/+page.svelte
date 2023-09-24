@@ -1,6 +1,9 @@
 <script>
     import {page} from "$app/stores";
     import {language} from "$lib/stores.ts";
+    import {getStorage, ref, getDownloadURL} from "firebase/storage";
+
+    const storage = getStorage();
 
     export let allItems = $page.data.props.data;
     let scarfItems = [];
@@ -31,13 +34,13 @@
         return text
     }
 
-    let lines = ['pirosmani', 'otskheli', 'our', 'maps']
+    let lines = ['pirosmani', 'otskheli', 'cacti...', 'maps']
 
     function getName(line, lan) {
         let mapped = {
             'pirosmani': 'ფიროსმანი',
             'otskheli': 'ოცხელი',
-            'our': 'ჩვენი დიზაინი',
+            'cacti...': 'კაკტუსი...',
             'maps': 'რუკები'
         }
         if (lan === 'EN') {
@@ -46,30 +49,35 @@
         return mapped[line]
     }
 
+    function getLine(line) {
+        return line === "cacti..." ? "our" : line;
+    }
+
 </script>
 
-<div class="pl-16">
+<div class="phone-wrap pl-16">
     <ul class="flex flex-row">
         {#each lines as line}
             <li>
-                <a class={activeClass("/scarves/" + line)} href={"/scarves/" + line}>{getName(line, $language)}</a>
+                <a class={activeClass("/scarves/" + line)}
+                   href={"/scarves/" + getLine(line)}>{getName(line, $language)}</a>
             </li>
         {/each}
     </ul>
 </div>
 <div class="flex-grow flex justify-center h-full w-full">
-    <div class="p-12 grid content-center grid-cols-4">
+    <div class="p-12 image-grid content-center justify-around">
         {#each scarfItems as scarf}
-            {#await scarf.imgSrc}
-                <div class="pl-3 pr-3 pb-20 justify-center">
+            {#await getDownloadURL(ref(storage, scarf.imgSrc))}
+                <div class="mb-20 border-2 rounded justify-center">
                     <img src="" width="300" height="300" alt="">
                     <p class="w-full flex content-center justify-center">Loading...</p>
                 </div>
-            {:then base64}
+            {:then img}
                 <a href={scarf.href}
-                   class="pl-3 pr-3 pb-20 justify-center transform transition-transform duration-300 hover:scale-110">
-                    <img src={scarf.imgSrc} width="300" height="300" alt={scarf.alt}>
-<!--                    <p class="w-full flex content-center justify-center">{getText(scarf, $language)}</p>-->
+                   class="mb-20 border-1 bg-gray-100 rounded justify-center transform transition-transform duration-300 hover:scale-110">
+                    <img src={img} width="300" height="300" alt={scarf.alt}>
+                    <!--                    <p class="w-full flex content-center justify-center">{getText(scarf, $language)}</p>-->
                 </a>
             {/await}
         {/each}
@@ -77,6 +85,21 @@
 </div>
 
 <style>
+    @media (max-width: 640px) {
+        .phone-wrap {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+
+    .image-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 300px);
+    }
+
     ul {
         list-style: none;
         display: flex;

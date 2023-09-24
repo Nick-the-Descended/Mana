@@ -1,4 +1,5 @@
-import type { Load } from '@sveltejs/kit';
+import type {Load} from '@sveltejs/kit';
+import {getDatabase, ref, child, get} from "firebase/database";
 
 interface DataProps {
     data: Record<string, any>;
@@ -6,25 +7,22 @@ interface DataProps {
 
 export const load: Load = async (): Promise<{ props: DataProps } | { status: number; error: Error }> => {
     const slugs = ['pirosmani', 'otskheli', 'our', 'maps'];
+    let data: Record<string, any> = {};
 
-    try {
-        let data: Record<string, any> = {};
+    const dbRef = ref(getDatabase());
+    let snapshot = await get(child(dbRef, `data`));
 
-        for (const slug of slugs) {
-            const module = await import(`../../../data/${slug}.json`);
-            data[slug] = module.default;
+    if (snapshot.exists()) {
+        const parsed = snapshot.val();
+
+        for (const key in parsed) {
+            data[key] = parsed[key];
         }
-
-        return {
-            props: {
-                data
-            }
-        };
-    } catch (err) {
-        console.error(`Failed to load data`, err);
-        return {
-            status: 404,
-            error: new Error('Not found')
-        };
     }
+
+    return {
+        props: {
+            data
+        }
+    };
 };
