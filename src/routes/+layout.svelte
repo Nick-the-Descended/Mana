@@ -93,7 +93,11 @@
     <div class="footer-wrap pb-5 pt-5 bg-gray-200">
         <footer class="flex items-center justify-center">
             <ul class="text-center space-x-4 pt-5 pb-5 flex flex-row">
-                <li class="inline-block"><a href="mailto:info.mana.scarf@gmail.com">info.mana.scarf@gmail.com</a>
+                <li class="flex flex-col">
+                    <a href="tel:+995599173222">+995 599 17 32 22</a>
+                </li>
+                <li class="flex flex-col">
+                    <a href="mailto:info.mana.scarf@gmail.com">info.mana.scarf@gmail.com</a>
                 </li>
                 <li class="flex space-x-4">
                     <a href="https://www.instagram.com/mana_scarf_mana/" target="_blank" rel="noopener noreferrer">

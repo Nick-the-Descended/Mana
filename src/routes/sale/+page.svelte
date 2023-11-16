@@ -14,10 +14,15 @@
     $:{
         if (path) {
             scarfItems = allItems['sale'];
+            if (!isIterable(scarfItems)){
+                scarfItems = [];
+            }
         }
     }
 
-    scarfItems = scarfItems ? scarfItems : [];
+    function isIterable(obj) {
+        return obj != null && typeof obj[Symbol.iterator] === 'function';
+    }
 
     function getText(scarf, lan) {
         let text = lan === 'EN' ? scarf.textEn : scarf.textGeo;
