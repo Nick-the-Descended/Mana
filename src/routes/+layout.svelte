@@ -1,15 +1,14 @@
 <script>
-    import { initializeApp } from "firebase/app";
-    import { getDatabase } from "firebase/database";
-    import { getStorage } from "firebase/storage";
+    import {initializeApp} from "firebase/app";
+    import {getDatabase} from "firebase/database";
+    import {getStorage} from "firebase/storage";
     import "../app.css";
     import {page} from '$app/stores';
     import {language} from "$lib/stores.ts";
-    import {onMount} from "svelte";
 
     // can be moved to env
-    const PROJECT_ID='mana-scarf'
-    const DATABASE_NAME='mana-scarf-default-rtdb'
+    const PROJECT_ID = 'mana-scarf'
+    const DATABASE_NAME = 'mana-scarf-default-rtdb'
 
     const firebaseConfig = {
         authDomain: `${PROJECT_ID}.firebaseapp.com`,
@@ -42,9 +41,10 @@
         }
     }
 </script>
-<svelte:window bind:innerWidth={screenSize} />
+<svelte:window bind:innerWidth={screenSize}/>
 
-<div class="flex flex-col justify-between min-h-screen top-0 pt-0" style='--screenSize:{calculateValue(screenSize) || 1400};'>
+<div class="flex flex-col justify-between min-h-screen top-0 pt-0"
+     style='--screenSize:{calculateValue(screenSize) || 1400};'>
     <div class="phone-nav-wrap pl-16 pr-16 dynamic">
         <nav class="phone-nav p-6 pt-16 pb-0">
             <div class="phone-flex ml-0 mr-0 container flex justify-between items-center">
@@ -65,8 +65,6 @@
                 <div class="phone-links space-x-10 font-medium">
                     <a href="/scarves"
                        class={activeClass('/scarves')}>{$language === 'EN' ? 'SCARVES' : 'შარფები'}</a>
-                    <a href="/sale"
-                       class={activeClass('/sale')}>{$language === 'EN' ? 'SALE' : 'ფასდაკლება'}</a>
                     <a href="/about"
                        class={activeClass('/about')}>{$language === 'EN' ? 'ABOUT US' : 'ჩვენს შესახებ'}</a>
                 </div>
@@ -116,35 +114,42 @@
 
 <style lang="postcss">
     .dynamic {
-        margin: 0 calc(var(--screenSize) * 1vw ) 1rem calc(var(--screenSize) * 1vw ) !important;
+        margin: 0 calc(var(--screenSize) * 1vw) 1rem calc(var(--screenSize) * 1vw) !important;
     }
-    .phone-show{
+
+    .phone-show {
         display: none;
     }
 
     @media (max-width: 700px) {
 
-        .phone-links{
+        .phone-links {
             width: 100%;
             display: flex;
             justify-content: space-evenly;
         }
-        .phone-logo{
+
+        .phone-logo {
             /*padding-bottom: 15px;*/
         }
-        .phone-hide{
+
+        .phone-hide {
             display: none;
         }
-        .phone-show{
+
+        .phone-show {
             display: inline-block;
         }
+
         .phone-flex {
             flex-wrap: wrap;
             gap: 25px;
         }
+
         .phone-nav {
             padding: 20px 10px 15px 10px;
         }
+
         .phone-nav-wrap {
             padding: 0;
         }

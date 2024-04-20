@@ -23,8 +23,8 @@
             href: "/scarves/our",
             imgSrc: "/scarves/our_design.webp",
             alt: "our",
-            textEn: "cacti...",
-            textGeo: "კაკტუსი..."
+            textEn: "mana art",
+            textGeo: "მანას არტი"
         },
         {
             href: "/scarves/maps",

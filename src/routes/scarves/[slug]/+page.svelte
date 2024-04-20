@@ -10,7 +10,14 @@
 
     $: path = $page.url.pathname;
 
-    $: activeClass = (p) => path === p ? 'underline' : '';
+    $: activeClass = (p) => {
+        if (path === 'our') {
+            return p.endsWith('art')
+        }
+
+        return path === p ? 'underline' : '';
+    }
+
     $:{
         if (path) {
             scarfItems = allItems[path.toString().split('/')[2]];
@@ -34,13 +41,13 @@
         return text
     }
 
-    let lines = ['pirosmani', 'otskheli', 'cacti...', 'maps']
+    let lines = ['pirosmani', 'otskheli', 'mana art', 'maps']
 
     function getName(line, lan) {
         let mapped = {
             'pirosmani': 'ფიროსმანი',
             'otskheli': 'ოცხელი',
-            'cacti...': 'კაკტუსი...',
+            'mana art': 'მანას არტი',
             'maps': 'რუკები'
         }
         if (lan === 'EN') {
@@ -50,7 +57,7 @@
     }
 
     function getLine(line) {
-        return line === "cacti..." ? "our" : line;
+        return line === "mana art" ? "our" : line;
     }
 
 </script>
@@ -59,7 +66,7 @@
     <ul class="flex flex-row">
         {#each lines as line}
             <li>
-                <a class={activeClass("/scarves/" + line)}
+                <a class={activeClass("/scarves/" + getLine(line))}
                    href={"/scarves/" + getLine(line)}>{getName(line, $language)}</a>
             </li>
         {/each}

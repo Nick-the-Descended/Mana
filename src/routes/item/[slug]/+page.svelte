@@ -29,8 +29,8 @@
     $: {
         if (path && typeof path === 'string' && path[0] !== '[') {
 
-                fetchImages()
-                fetchDescription();
+            fetchImages()
+            fetchDescription();
         }
     }
 
@@ -46,7 +46,7 @@
     let selectedIndex = 0;
     $: selectedImage = images[0];
 
-    let lines = ['pirosmani', 'otskheli', 'cacti...', 'maps']
+    let lines = ['pirosmani', 'otskheli', 'mana art', 'maps']
 
     let counter = 1;
     $: {
@@ -75,7 +75,7 @@
         let mapped = {
             'pirosmani': 'ფიროსმანი',
             'otskheli': 'ოცხელი',
-            'cacti...': 'კაკტუსი...',
+            'mana art': 'მანას არტი',
             'maps': 'რუკები'
         }
         if (lan === 'EN') {
@@ -84,12 +84,12 @@
         return mapped[line]
     }
 
-    function getDescription(item, lan) {
+    function getDescription(item) {
         return item.split(':').join(': ')
     }
 
     function getLine(line) {
-        return line === "cacti..." ? "our" : line;
+        return line === "mana art" ? "our" : line;
     }
 
     let screenSize;

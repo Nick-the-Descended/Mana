@@ -21,7 +21,7 @@ body {
     --bg-3: hsl(206, 20%, 80%);
     --fg-1: hsl(0, 0%, 13%);
     --fg-2: hsl(0, 0%, 20%);
-    --fg-2: hsl(0, 0%, 30%);
+    --fg-3: hsl(0, 0%, 30%);
     --link: hsl(208, 77%, 47%);
     --border-radius: 4px;
     font-family: FiraGo, sans-serif;
