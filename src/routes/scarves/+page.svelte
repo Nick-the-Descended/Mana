@@ -53,7 +53,7 @@
                 </div>
             {:then img}
                 <a href={scarf.href} class="p-3">
-                    <div class="border-1 bg-gray-100 rounded flex flex-grow justify-center items-center">
+                    <div class="border-1 bg-2 rounded flex flex-grow justify-center items-center">
                         <img class="transition-all duration-200 hover:scale-105" src={img} alt={scarf.alt}>
                     </div>
                     <p class="pt-2 font-semibold w-full flex content-center justify-center">

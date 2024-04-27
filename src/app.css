@@ -10,26 +10,45 @@ html::-webkit-scrollbar-thumb {
     background-color: hsl(0 0% 100% / 0.5);
     scrollbar-color: transparent transparent;
 }
-html::-webkit-scrollbar{
+
+html::-webkit-scrollbar {
     width: 0;
 }
 
 body {
+    color-scheme: light dark;
     scrollbar-gutter: stable;
+    /**/
     --bg-1: hsl(0, 0%, 100%);
-    --bg-2: hsl(206, 20%, 90%);
-    --bg-3: hsl(206, 20%, 80%);
+    /*rgb(243 244 246)*/
+    --bg-2: hsl(210, 18%, 95%);
     --fg-1: hsl(0, 0%, 13%);
     --fg-2: hsl(0, 0%, 20%);
     --fg-3: hsl(0, 0%, 30%);
     --link: hsl(208, 77%, 47%);
     --border-radius: 4px;
-    font-family: FiraGo, sans-serif;
+    font-family: FiraGo, system-ui, sans-serif;
     background: var(--bg-1);
     color: var(--fg-1);
     line-height: 1.5;
     height: calc(100vh - 2rem);
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-1: #181a1b;
+        --bg-2: hsl(197, 6%, 22.5%);
+        --fg-1: hsl(0, 0%, 80%);
+        --fg-2: hsl(0, 0%, 55%);
+        --fg-3: hsl(0, 0%, 35%);
+        --link: hsl(208, 77%, 47%);
+    }
+}
+
+.bg-2{
+    background-color: var(--bg-2);
+}
+
 nav {
     position: relative;
     display: flex;

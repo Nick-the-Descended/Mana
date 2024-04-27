@@ -82,7 +82,7 @@
                 </div>
             {:then img}
                 <a href={scarf.href}
-                   class="mb-20 border-1 bg-gray-100 rounded justify-center transform transition-transform duration-300 hover:scale-110">
+                   class="mb-20 border-1 bg-2 rounded justify-center transform transition-transform duration-300 hover:scale-110">
                     <img src={img} width="300" height="300" alt={scarf.alt}>
                     <!--                    <p class="w-full flex content-center justify-center">{getText(scarf, $language)}</p>-->
                 </a>

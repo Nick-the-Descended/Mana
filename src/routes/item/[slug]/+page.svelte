@@ -123,12 +123,12 @@
                      selectedImage = image;
                      selectedIndex = index;
                     }}>
-                            <img class="small-image image bg-gray-200" width="150" height="150" src={image}
+                            <img class="small-image image bg-2" width="150" height="150" src={image}
                                  alt={`Failed to load ${index + 1}`}>
                         </div>
                     {/each}
                     <div class="div_4">
-                        <img class="big-image image bg-gray-200" width="1000" height="1000" src={selectedImage}
+                        <img class="big-image image bg-2" width="1000" height="1000" src={selectedImage}
                              alt="Failed to load selected image">
                     </div>
                 </div>
@@ -143,12 +143,12 @@
                      selectedImage = image;
                      selectedIndex = index;
                     }}>
-                                <img class="small-image image bg-gray-200" width="150" height="150" src={image}
+                                <img class="small-image image bg-2" width="150" height="150" src={image}
                                      alt={`Failed to load ${index + 1}`}>
                             </div>
                         {/each}
                         <div class="div_4">
-                            <img class="big-image image bg-gray-200" width="1000" height="1000" src={selectedImage}
+                            <img class="big-image image bg-2" width="1000" height="1000" src={selectedImage}
                                  alt="Failed to load selected image">
                         </div>
                     </div>
@@ -162,12 +162,12 @@
                                      selectedImage = image;
                                      selectedIndex = index;
                                     }}>
-                                <img class="small-image image bg-gray-200" width="150" height="150" src={image}
+                                <img class="small-image image bg-2" width="150" height="150" src={image}
                                      alt={`Failed to load ${index + 1}`}>
                             </div>
                         {/each}
                         <div class="div4">
-                            <img class="big-image image bg-gray-200" width="1000" height="1000" src={selectedImage}
+                            <img class="big-image image bg-2" width="1000" height="1000" src={selectedImage}
                                  alt="Failed to load selected image">
                         </div>
                     </div>
