@@ -2,12 +2,12 @@
     import {language} from "$lib/stores.ts";
 
     let en_paragraphs = [
-        "MaNa is a new Georgian brand creating unique designs on scarves. MaNa guarantees quality, taste, simplicity, and excellent service.",
+        "MaNa is a Georgian brand creating unique designs on scarves. MaNa guarantees quality, taste, simplicity, and excellent service.",
         "United under the brand name MaNa two friends - Tbilisi Art Academy graduates Maya Jikia (Textile & Jewellery Designer) and Natalia Mujirishvili (Graphic Designer) - creating scarves with the unique design.",
         "The mission of “MaNa” is to introduce Georgia and Georgian Painters to the world, and give you a chance to keep a small souvenir as a reminder of their artwork."
     ]
     let geo_paragraphs = [
-        "„მანა“ ახალი ქართული ბრენდია რომელიც გთავაზობთ შარფებს გამორჩეული დიზაინით. \n",
+        "„მანა“ ქართული ბრენდია რომელიც გთავაზობთ შარფებს გამორჩეული დიზაინით. \n",
         "შარფების დიზაინი  ექსკლუზიურად მანას მიერ არის შექმნილი. მათ შორის  არის ქართველი მხატვრების: ნიკო ფიროსმანისა და პეტრე ოცხელის ნამუშევრებიც, რომლებიც მანამ შარფებს მოარგო და მსურველებს მისცა საშუალება ჩვენი ქვეყნის  საგანძური თავად ატარონ.\n",
         "თავისი ნამუშევრებით მანა ცდილობს პოპულარიზაცია გაუწიოს ქართულ ხელოვნებას და გააცნოს ფართო საზოგადოებას. სწორედ ამის მაგალითია, დანიაში, ლუიზიანას თანამედროვე ხელოვნების მუზეუმში გამართულ ნიკო ფიროსმანის გამოფენის პარალელურად, მუზეუმის მაღაზიაში წარმოდგენილი მანას შარფები, შექმნილი ფიროსმანის ნახატებით, რამაც დიდი მოწონება დაიმსახურა და მალევე გაიყიდა.\n" +
         "\n",
